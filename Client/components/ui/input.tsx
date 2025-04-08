@@ -1,12 +1,12 @@
 // ./components/ui/input.tsx
 "use client";
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { useMotionTemplate, useMotionValue, motion } from "motion/react";
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  // Add custom props here in the future if needed
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
@@ -56,6 +56,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     );
   }
 );
+
 Input.displayName = "Input";
 
 export { Input };

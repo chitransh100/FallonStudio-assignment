@@ -5,6 +5,7 @@ import axios from "axios";
 import { setFeedbacks } from "@/redux/slices/feedbackSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { List } from "./list" // Adjust path if needed
+import apiURL from "@/lib/config";
 
 export const AdminView = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +15,7 @@ export const AdminView = () => {
     const fetchFeedback = async () => {
       try {
         const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_BaseURL}/admin`,
+          `${apiURL}/admin`,
           { withCredentials: true }
         );
         dispatch(setFeedbacks(res.data.data));

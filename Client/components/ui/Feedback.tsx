@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import axios from "axios";
+import apiURL from "@/lib/config";
 
 const Feedback = () => {
   const [loading, setLoading] = useState(false);
@@ -22,7 +23,7 @@ const Feedback = () => {
     setLoading(true);
     try {
       await axios.post(
-        `${process.env.NEXT_PUBLIC_BaseURL}/feedback`,
+        `${apiURL}/feedback`,
         {
           name: form.name,
           email: form.email,
