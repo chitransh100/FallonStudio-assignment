@@ -44,7 +44,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
 
           {/* Theme Toggle */}
           {/* Theme toggle with DaisyUI */}
-          <input type="checkbox" value="synthwave" className="toggle theme-controller" />
+          {/* <input type="checkbox" value="synthwave" className="toggle theme-controller" /> */}
 
 
 
