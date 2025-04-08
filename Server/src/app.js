@@ -26,9 +26,12 @@ ConnectDB().then(()=>{
 
 app.use("/",express.json())
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://fallon-studio-assignment.vercel.app"
+    ],
     credentials: true
-}))
+  }));
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
